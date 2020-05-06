@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PokemonModelController.h"
+#import "DvmPokemon.h"
 
 @interface AppDelegate ()
 

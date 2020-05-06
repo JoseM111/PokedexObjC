@@ -15,6 +15,8 @@
 		AB16C6262461C703007E789C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB16C6242461C703007E789C /* LaunchScreen.storyboard */; };
 		AB16C6292461C703007E789C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB16C6282461C703007E789C /* main.m */; };
 		AB16C6382461D08D007E789C /* DvmPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = AB16C6372461D08D007E789C /* DvmPokemon.m */; };
+		AB16C63B246208B2007E789C /* PokemonModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB16C63A246208B2007E789C /* PokemonModelController.m */; };
+		AB2C3CCF24621FAA000730B4 /* DvmPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2C3CCE24621FAA000730B4 /* DvmPokemonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		AB16C6282461C703007E789C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB16C6362461D08D007E789C /* DvmPokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DvmPokemon.h; sourceTree = "<group>"; };
 		AB16C6372461D08D007E789C /* DvmPokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DvmPokemon.m; sourceTree = "<group>"; };
+		AB16C639246208B2007E789C /* PokemonModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PokemonModelController.h; sourceTree = "<group>"; };
+		AB16C63A246208B2007E789C /* PokemonModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PokemonModelController.m; sourceTree = "<group>"; };
+		AB2C3CCD24621FA9000730B4 /* PokedexObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokedexObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		AB2C3CCE24621FAA000730B4 /* DvmPokemonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DvmPokemonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,8 @@
 		AB16C6322461C72C007E789C /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				AB16C639246208B2007E789C /* PokemonModelController.h */,
+				AB16C63A246208B2007E789C /* PokemonModelController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -111,6 +119,8 @@
 		AB16C6332461C753007E789C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AB2C3CCE24621FAA000730B4 /* DvmPokemonViewController.swift */,
+				AB2C3CCD24621FA9000730B4 /* PokedexObjC-Bridging-Header.h */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -160,6 +170,7 @@
 				TargetAttributes = {
 					AB16C6122461C701007E789C = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -200,8 +211,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB16C61E2461C701007E789C /* ViewController.m in Sources */,
+				AB2C3CCF24621FAA000730B4 /* DvmPokemonViewController.swift in Sources */,
 				AB16C6182461C701007E789C /* AppDelegate.m in Sources */,
 				AB16C6382461D08D007E789C /* DvmPokemon.m in Sources */,
+				AB16C63B246208B2007E789C /* PokemonModelController.m in Sources */,
 				AB16C6292461C703007E789C /* main.m in Sources */,
 				AB16C61B2461C701007E789C /* SceneDelegate.m in Sources */,
 			);
@@ -335,6 +348,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -343,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PokedexObjC/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -351,6 +366,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-Plaza-DePapel.PokedexObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexObjC/Controllers/ViewController/PokedexObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -359,6 +377,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PokedexObjC/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,6 +386,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-Plaza-DePapel.PokedexObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PokedexObjC/Controllers/ViewController/PokedexObjC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

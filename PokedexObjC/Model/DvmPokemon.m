@@ -2,7 +2,7 @@
 
 // Sub class of NSObject
 @implementation DvmPokemon
-// MARK: _@
+
 /**©------------------------------------------------------------------------------©*/
 - (instancetype)initWithPokemonName:(NSString *)name identifier:(NSInteger)identifier abilities:(NSArray<NSString *> *)abilities spritePath:(NSString *)spritePath {
     // Create the parent before i can create the child
@@ -17,9 +17,10 @@
     }
     return self;
 }
-/**©------------------------------------------------------------------------------©*/
 @end
+
 /**©------------------------------------------------------------------------------©*/
+
 @implementation DvmPokemon (JSONConvertible)
 // func DvmPokemon initWithDictFunc((NSDictionary:[NSString : id ] )
 - (DvmPokemon *)initWithDictFunc:(NSDictionary<NSString *, id> *)topLvlDict {

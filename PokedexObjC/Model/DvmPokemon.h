@@ -23,11 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
                   spritePath:(NSString *)spritePath;
 /**©------------------------------------------------------------------------------©*/
 @end
+
 // swift: extension: DvmPokemon
 // extension in Obj-C
 @interface DvmPokemon (JSONConvertible)
 // Method that takes in a dictionary
 - (DvmPokemon *) initWithDictFunc:(NSDictionary<NSString *,  id> *)topLvlDict;
 /**©------------------------------------------------------------------------------©*/
+@end
 
 NS_ASSUME_NONNULL_END
